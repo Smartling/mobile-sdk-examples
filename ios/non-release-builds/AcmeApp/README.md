@@ -51,6 +51,7 @@ In our code, we can now use the macros:
 #else
 // release only code
 #endif
+```
 
 ## Use conditionals to handle the Smartling SDK
 
