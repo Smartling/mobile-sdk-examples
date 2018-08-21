@@ -1,0 +1,6 @@
+framework module Pods_AcmeApp {
+  umbrella header "Pods-AcmeApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - Smartling-framework (1.4.6)
+
+DEPENDENCIES:
+  - Smartling-framework
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Smartling-framework
+
+SPEC CHECKSUMS:
+  Smartling-framework: df8b7a948759301e3977e92a81294c4afb53d510
+
+PODFILE CHECKSUM: 42c24fabd9f9ed616301e58e319fcb0c46edd2ab
+
+COCOAPODS: 1.5.3
