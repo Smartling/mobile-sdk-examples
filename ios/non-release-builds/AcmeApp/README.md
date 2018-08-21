@@ -41,7 +41,7 @@ In our code, we can use following marcros:
 
 In Swift, you have to update the project settings. Open your Project Build Settings
 and search for "Swift Compiler - Custom Flags" ... "Other Swift Flags". In the "Debug"
-section, add `-DDEBUG
+section, add `-DDEBUG`
 
 In our code, we can now use the macros:
 
