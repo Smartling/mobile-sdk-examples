@@ -21,5 +21,58 @@ end
 ```
 [See the full podfile][Podfile]
 
+## Compiler Flags
+
+### Objective-C
+
+In Objective-C, the `DEBUG` flag is already defined as a preprocessor macro.
+
+In our code, we can use following marcros:
+
+```
+#ifdef DEBUG
+// debug only code
+#else
+// release only code
+#endif
+```
+
+### Swift
+
+In Swift, you have to update the project settings. Open your Project Build Settings
+and search for "Swift Compiler - Custom Flags" ... "Other Swift Flags". In the "Debug"
+section, add `-DDEBUG
+
+In our code, we can now use the macros:
+
+```
+#if DEBUG
+// debug only code
+#else
+// release only code
+#endif
+
+## Use conditionals to handle the Smartling SDK
+
+In our App delegate, we conditionally initialize the Smartling SDK:
+
+```
+#import "AppDelegate.h"
+#if DEBUG
+#import "Smartling/Smartling.h"
+#endif
+
+@interface AppDelegate ()
+@end
+
+@implementation AppDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+#if DEBUG
+    [Smartling startWithProjectId:@"ac3ff4ee2" andOptions:@{SLLogging : SLLoggingDebug, SLMode: SLInAppReview}];
+#endif
+    return YES;
+}
+@end
+```
 
 [Podfile]: https://github.com/Smartling/mobile-sdk-examples/blob/master/ios/non-release-builds/AcmeApp/Podfile
