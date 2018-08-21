@@ -76,4 +76,10 @@ In our App delegate, we conditionally initialize the Smartling SDK:
 @end
 ```
 
+## Running the Demo
+You can clone this repository and run the AcmeApp. In debug mode, the Smartling In-App Review feature will be
+available in debug builds. Edit the build scheme and change the build configuration from "Debug" to "Release".
+Run the application again, note that the conditionals we used still allow the App to compile without the
+Smartling SDK being linked. In this configuration, the Smartling SDK is not present in the built application.
+
 [Podfile]: https://github.com/Smartling/mobile-sdk-examples/blob/master/ios/non-release-builds/AcmeApp/Podfile
