@@ -41,7 +41,7 @@ we'll add it as a flavor specific dependency.
 
 Gradle 4.x and later:
 
-   reviewImplementation "com.smartling.android:review:2.6.1"
+    reviewImplementation "com.smartling.android:review:2.6.1"
 
 Gradle 3.x or earlier:
 
