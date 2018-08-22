@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Acme App</string>
+    <string name="app_label">Welcome</string>
+</resources>
