@@ -12,7 +12,7 @@ certain build flavors. To do this we:
 
 ## Enable Flavors in the Android Config
 
-Android supports multiple build flavors. This can be used to ship differnt falvors of
+Android supports multiple build flavors. This can be used to ship differnt flavors of
 your application (e.g. paid vs free, internal vs external, etc). We'll define a flavor
 called "review" and another called "full" (this name does not matter). Android requires
 that each flavor have a dimension, this is an arbitrary string. Here we've used "type."
