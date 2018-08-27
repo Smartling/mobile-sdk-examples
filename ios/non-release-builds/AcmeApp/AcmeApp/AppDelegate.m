@@ -20,7 +20,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 #if DEBUG
-    [Smartling startWithProjectId:@"ac3ff4ee2" andOptions:@{SLLogging : SLLoggingDebug, SLMode: SLInAppReview}];
+    [Smartling startWithProjectId:@"ac3ff4ee2"andOptions:@{
+                                                            SLLogging : SLLoggingDebug,
+                                                            SLMode: SLInAppReviewAndContextCapture,
+                                                            SLAPIUserId: @"fake",
+                                                            SLAPIUserSecret: @"fak3"
+                                                            }];
 #endif
     return YES;
 }

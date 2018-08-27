@@ -9,14 +9,16 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (weak) IBOutlet UILabel *label;
 @end
+
+
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.label.text = NSLocalizedString(@"LABEL_TEXT", nil);
 }
 
 

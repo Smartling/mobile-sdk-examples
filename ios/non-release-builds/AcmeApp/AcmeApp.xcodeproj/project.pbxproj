@@ -14,6 +14,7 @@
 		D245D6B6212C4E950007C644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D245D6B5212C4E950007C644 /* Assets.xcassets */; };
 		D245D6B9212C4E950007C644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D245D6B7212C4E950007C644 /* LaunchScreen.storyboard */; };
 		D245D6BC212C4E950007C644 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D245D6BB212C4E950007C644 /* main.m */; };
+		D29912BA212F277C00067954 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D29912B8212F277C00067954 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D245D6B8212C4E950007C644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D245D6BA212C4E950007C644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D245D6BB212C4E950007C644 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D29912B9212F277C00067954 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = AcmeApp/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		D245D6A0212C4E940007C644 = {
 			isa = PBXGroup;
 			children = (
+				D29912B8212F277C00067954 /* Localizable.strings */,
 				D245D6AB212C4E940007C644 /* AcmeApp */,
 				D245D6AA212C4E940007C644 /* Products */,
 				910F476090CDB04B14D148BB /* Pods */,
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D245D6B9212C4E950007C644 /* LaunchScreen.storyboard in Resources */,
+				D29912BA212F277C00067954 /* Localizable.strings in Resources */,
 				D245D6B6212C4E950007C644 /* Assets.xcassets in Resources */,
 				D245D6B4212C4E940007C644 /* Main.storyboard in Resources */,
 			);
@@ -229,6 +233,14 @@
 				D245D6B8212C4E950007C644 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D29912B8212F277C00067954 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D29912B9212F277C00067954 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
