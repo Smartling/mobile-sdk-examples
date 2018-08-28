@@ -4,11 +4,12 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url 'https://raw.githubusercontent.com/Smartling/android-repository/snapshots'}
         maven { url 'https://raw.githubusercontent.com/Smartling/android-repository/releases'}
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.4'
-        classpath 'com.smartling.android:plugin:2.6.1'
+        classpath 'com.smartling.android:plugin:2.6.3-SNAPSHOT'
 
 
 
@@ -21,6 +22,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://raw.githubusercontent.com/Smartling/android-repository/snapshots'}
         maven { url 'https://raw.githubusercontent.com/Smartling/android-repository/releases'}
         maven { url "https://www.jitpack.io" }
     }
