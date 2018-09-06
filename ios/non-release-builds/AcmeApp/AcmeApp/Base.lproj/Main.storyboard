@@ -37,8 +37,9 @@
                                     <barButtonItem title="Item" id="T7A-wR-Ka4"/>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELx-vn-bRv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELx-vn-bRv">
                                 <rect key="frame" x="16" y="138" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -46,15 +47,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ELx-vn-bRv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="138" id="HlY-wS-kkH"/>
-                            <constraint firstItem="ELx-vn-bRv" firstAttribute="trailing" secondItem="DbI-md-qpH" secondAttribute="trailing" id="HqW-wY-tCj"/>
+                            <constraint firstItem="3La-n1-TxI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EAA-HH-re6"/>
                             <constraint firstItem="DbI-md-qpH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="L1k-fX-Asq"/>
-                            <constraint firstItem="ELx-vn-bRv" firstAttribute="centerX" secondItem="qwa-z1-bEm" secondAttribute="centerX" id="L3x-fd-B41"/>
                             <constraint firstItem="DbI-md-qpH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RBA-dq-WEh"/>
                             <constraint firstItem="DbI-md-qpH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XQK-Nd-kHX"/>
-                            <constraint firstItem="ELx-vn-bRv" firstAttribute="leading" secondItem="DbI-md-qpH" secondAttribute="leading" id="ahr-BU-eBU"/>
-                            <constraint firstItem="ELx-vn-bRv" firstAttribute="centerX" secondItem="3La-n1-TxI" secondAttribute="centerX" id="i4G-S5-Rfn"/>
-                            <constraint firstItem="ELx-vn-bRv" firstAttribute="top" secondItem="qwa-z1-bEm" secondAttribute="bottom" constant="74" id="mQj-4I-Mqz"/>
+                            <constraint firstItem="3La-n1-TxI" firstAttribute="trailing" secondItem="qwa-z1-bEm" secondAttribute="trailing" id="dbz-2X-u8K"/>
+                            <constraint firstItem="3La-n1-TxI" firstAttribute="leading" secondItem="qwa-z1-bEm" secondAttribute="leading" id="n2U-zt-wE7"/>
+                            <constraint firstItem="3La-n1-TxI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vL5-z5-krR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

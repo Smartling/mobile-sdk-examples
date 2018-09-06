@@ -143,7 +143,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${PODS_ROOT}/Smartling-framework/Smartling.framework"
+  install_framework "${PODS_ROOT}/SmartlingFramework/Smartling.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

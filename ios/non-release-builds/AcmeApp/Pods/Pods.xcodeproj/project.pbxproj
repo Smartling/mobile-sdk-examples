@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20446F1AD0B7B93D501F72029279E1BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		AE2545F5CADBE552F68BFD7D6FFE0586 /* Pods-AcmeApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E95427DE8AE737A6C7EFA834C8836 /* Pods-AcmeApp-dummy.m */; };
-		AF34B29C6D00ECCEF2A06752447EA298 /* Pods-AcmeApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7257CD30B6B5734635A7279BF98EEAC2 /* Pods-AcmeApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FCE04C459760FFA8D0A63703029B95C /* Pods-AcmeApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E95427DE8AE737A6C7EFA834C8836 /* Pods-AcmeApp-dummy.m */; };
+		5C309D53B2968B9A94395F53C2550072 /* Pods-AcmeApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7257CD30B6B5734635A7279BF98EEAC2 /* Pods-AcmeApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66EFA34395E6C3042D181B303026B216 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,10 +17,10 @@
 		0B9E95427DE8AE737A6C7EFA834C8836 /* Pods-AcmeApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AcmeApp-dummy.m"; sourceTree = "<group>"; };
 		52371D043B96B21B4639AA34C05BD678 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		654C790D140E5AC78EB5BA8C2722EC58 /* Smartling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Smartling.framework; sourceTree = "<group>"; };
 		7257CD30B6B5734635A7279BF98EEAC2 /* Pods-AcmeApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AcmeApp-umbrella.h"; sourceTree = "<group>"; };
-		79DFECB25093C9FF4E6E9A79569D7042 /* Smartling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Smartling.h; path = Smartling.framework/Headers/Smartling.h; sourceTree = "<group>"; };
+		80D4F8D7574F65A3D8FEBC3E0FFC520A /* Smartling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Smartling.h; path = Smartling.framework/Headers/Smartling.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9CF435E6D32BA75DED1A07C69BA3D31A /* Smartling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Smartling.framework; sourceTree = "<group>"; };
 		B53243BCCEC245D92AD2A1CDD845EF29 /* Pods_AcmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AcmeApp.framework; path = "Pods-AcmeApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80F09E5DB2574E3EE7051A7B58EBDBC /* Pods-AcmeApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AcmeApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		C0E14FEF7408FA8CFA692788B697CEC5 /* Pods-AcmeApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AcmeApp-resources.sh"; sourceTree = "<group>"; };
@@ -31,11 +31,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0896D4571C202BAFB425CD7B684EC58E /* Frameworks */ = {
+		3E9B3E2737BBB03E6FFB7E904C2182C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20446F1AD0B7B93D501F72029279E1BC /* Foundation.framework in Frameworks */,
+				66EFA34395E6C3042D181B303026B216 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,23 +50,31 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		6FD4E37D1E10EEF2E883B4A389D5C2FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CF435E6D32BA75DED1A07C69BA3D31A /* Smartling.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70F01C05B42B69B9895B14928B5A59D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F558C5C2514116FA3F3B77AC6979B179 /* SmartlingFramework */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				A562067044CA84E7AC1266410AF65C13 /* Pods */,
+				70F01C05B42B69B9895B14928B5A59D2 /* Pods */,
 				FBBB0482FC771B4806D144E260C753B0 /* Products */,
 				DB904908EBA97EA836160B324596B33C /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		A562067044CA84E7AC1266410AF65C13 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D080B2520B4050C2CC10AC60E07A66B8 /* Smartling-framework */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		ACF5A02315B2D5F8EB204B0A51DD64C0 /* Pods-AcmeApp */ = {
@@ -95,16 +103,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D080B2520B4050C2CC10AC60E07A66B8 /* Smartling-framework */ = {
-			isa = PBXGroup;
-			children = (
-				79DFECB25093C9FF4E6E9A79569D7042 /* Smartling.h */,
-				DFBB2CB29A206913DAFE31E4E55C4150 /* Frameworks */,
-			);
-			name = "Smartling-framework";
-			path = "Smartling-framework";
-			sourceTree = "<group>";
-		};
 		DB904908EBA97EA836160B324596B33C /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,12 +111,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		DFBB2CB29A206913DAFE31E4E55C4150 /* Frameworks */ = {
+		F558C5C2514116FA3F3B77AC6979B179 /* SmartlingFramework */ = {
 			isa = PBXGroup;
 			children = (
-				654C790D140E5AC78EB5BA8C2722EC58 /* Smartling.framework */,
+				80D4F8D7574F65A3D8FEBC3E0FFC520A /* Smartling.h */,
+				6FD4E37D1E10EEF2E883B4A389D5C2FC /* Frameworks */,
 			);
-			name = Frameworks;
+			name = SmartlingFramework;
+			path = SmartlingFramework;
 			sourceTree = "<group>";
 		};
 		FBBB0482FC771B4806D144E260C753B0 /* Products */ = {
@@ -132,24 +132,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4D0B2B7A8097087F11180FB46562406B /* Headers */ = {
+		0996D25A25CA3E9C5F53FC95B0BEACDF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF34B29C6D00ECCEF2A06752447EA298 /* Pods-AcmeApp-umbrella.h in Headers */,
+				5C309D53B2968B9A94395F53C2550072 /* Pods-AcmeApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		25AFDAD6F6E885A5E9BC605CC4F436E9 /* Pods-AcmeApp */ = {
+		2D1507DC897D8BC885E157D76D718204 /* Pods-AcmeApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC1B5D36B51730A974AB0E3C13C422FF /* Build configuration list for PBXNativeTarget "Pods-AcmeApp" */;
+			buildConfigurationList = B2F9BD92D30D36E3D337C2027BF2E7D4 /* Build configuration list for PBXNativeTarget "Pods-AcmeApp" */;
 			buildPhases = (
-				C6B2FFC81AF78351AAB688200E049A5D /* Sources */,
-				0896D4571C202BAFB425CD7B684EC58E /* Frameworks */,
-				4D0B2B7A8097087F11180FB46562406B /* Headers */,
+				0996D25A25CA3E9C5F53FC95B0BEACDF /* Headers */,
+				CB3F220D27A102B87C8794E4377F1658 /* Sources */,
+				3E9B3E2737BBB03E6FFB7E904C2182C1 /* Frameworks */,
+				A6C14258CCF5913216CCB27EA7C01CF2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -181,24 +182,93 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				25AFDAD6F6E885A5E9BC605CC4F436E9 /* Pods-AcmeApp */,
+				2D1507DC897D8BC885E157D76D718204 /* Pods-AcmeApp */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		A6C14258CCF5913216CCB27EA7C01CF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		C6B2FFC81AF78351AAB688200E049A5D /* Sources */ = {
+		CB3F220D27A102B87C8794E4377F1658 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE2545F5CADBE552F68BFD7D6FFE0586 /* Pods-AcmeApp-dummy.m in Sources */,
+				2FCE04C459760FFA8D0A63703029B95C /* Pods-AcmeApp-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1E7ADFD0387A35D5E006B0B924F7B918 /* Debug */ = {
+		96434B6C8FF320C976A10DAD7174A4BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B96FCFC4038E6EDE8E9254F42C057521 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EBD788EE88B23B9D7CDEAA407BE7B880 /* Pods-AcmeApp.debug.xcconfig */;
 			buildSettings = {
@@ -235,7 +305,7 @@
 			};
 			name = Debug;
 		};
-		1EE19F5DD95931924296F637BF18BD8F /* Debug */ = {
+		D11C82AF2204B41B80412B8DC9C1D652 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -289,7 +359,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -298,7 +369,7 @@
 			};
 			name = Debug;
 		};
-		6C81B7270A3235C62685933693DAABBB /* Release */ = {
+		D4DB363097836EF8884A7561AD1D7A96 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F727F2DABAD1BEA6F4A99EDEE66A03FB /* Pods-AcmeApp.release.xcconfig */;
 			buildSettings = {
@@ -336,81 +407,23 @@
 			};
 			name = Release;
 		};
-		F4568DEE257655D290C2B9CEAB37C934 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1EE19F5DD95931924296F637BF18BD8F /* Debug */,
-				F4568DEE257655D290C2B9CEAB37C934 /* Release */,
+				D11C82AF2204B41B80412B8DC9C1D652 /* Debug */,
+				96434B6C8FF320C976A10DAD7174A4BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC1B5D36B51730A974AB0E3C13C422FF /* Build configuration list for PBXNativeTarget "Pods-AcmeApp" */ = {
+		B2F9BD92D30D36E3D337C2027BF2E7D4 /* Build configuration list for PBXNativeTarget "Pods-AcmeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1E7ADFD0387A35D5E006B0B924F7B918 /* Debug */,
-				6C81B7270A3235C62685933693DAABBB /* Release */,
+				B96FCFC4038E6EDE8E9254F42C057521 /* Debug */,
+				D4DB363097836EF8884A7561AD1D7A96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,9 +1,9 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## Smartling-framework
+## SmartlingFramework
 
-All text and design is copyright © 2016 Smartling, Inc.
+All text and design is copyright © 2018 Smartling, Inc.
 
                 All rights reserved.
 

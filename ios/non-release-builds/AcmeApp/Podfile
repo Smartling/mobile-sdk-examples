@@ -2,5 +2,5 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'AcmeApp' do
-  pod 'Smartling-framework', :configurations => ['Debug'] 
+  pod 'SmartlingFramework', :configurations => ['Debug'] 
 end

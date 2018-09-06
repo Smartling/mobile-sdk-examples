@@ -14,7 +14,7 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>All text and design is copyright © 2016 Smartling, Inc.
+			<string>All text and design is copyright © 2018 Smartling, Inc.
 
                 All rights reserved.
 
@@ -23,7 +23,7 @@
 			<key>License</key>
 			<string>Commercial</string>
 			<key>Title</key>
-			<string>Smartling-framework</string>
+			<string>SmartlingFramework</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
