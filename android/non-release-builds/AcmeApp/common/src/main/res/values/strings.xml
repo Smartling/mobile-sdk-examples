@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Common</string>
+    <string name="title_activity_common">Common Activity</string>
+    <string name="label_title">Welcome to Activity 2</string>
+</resources>

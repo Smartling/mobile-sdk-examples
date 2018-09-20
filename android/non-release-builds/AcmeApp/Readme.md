@@ -3,107 +3,150 @@
 This application uses the Smarting SDK for In-App Review and/or Context Capture.
 The developer does not want to ship the Smartling SDK with release builds.
 
-To accomplish this, we configure the Gradle build to only link the Smartling SDK in
-certain build flavors. To do this we:
+1. Add the Smartling SDK as a Dependency
+2. Configure the Smartling SDK
 
-1. Enable Flavors in the Android config
-2. Add the Smartling SDK as a Flavor Dependency 
-3. Configure the Smartling SDK
+## Add the Smartling Plugin(s)
 
-## Enable Flavors in the Android Config
+### Single Module Application
 
-Android supports multiple build flavors. This can be used to ship differnt flavors of
-your application (e.g. paid vs free, internal vs external, etc). We'll define a flavor
-called "review" and another called "full" (this name does not matter). Android requires
-that each flavor have a dimension, this is an arbitrary string. Here we've used "type."
+If your appliction contains only a single module, you can configure Smartling
+by applying the plugin in your app's `build.gradle` by adding the Smartling
+plugin after the Android plugin:
 
-```
-android {
-    compileSdkVersion 25
-    defaultConfig { ... }
-    buildTypes { ... }
-    flavorDimensions "type"
-    productFlavors {
-        full {
-            dimension "type"
-        }
-        review {
-            dimension "type"
-            applicationIdSuffix ".review"
-        }
-    }
-}
-```
-## Add the Smartling SDK as a Flavor Dependency 
+    apply plugin: 'com.android.application'
+    apply plugin: 'com.smartling.android.application'
 
-Since we don't want to ship the Smartling SDK as part of our final project,
-we'll add it as a flavor specific dependency. 
+    smartling { ... }
 
-Gradle 4.x and later:
+The SDK configuration section can be added directly to the app module.
 
-    reviewImplementation "com.smartling.android:review:2.6.1"
+### Multi Module Applications
 
-Gradle 3.x or earlier:
+If you use multiple modules to build your application, you must configure the
+Smartling SDK in the main `build.gradle` file. For each library module, add
+the Smartling library plugin. For the application module - there can only be
+one - add the Smartling application plugin.
 
-    reviewCompile "com.smartling.android:review:2.6.1"
+Root build.gradle:
+
+     apply plugin: 'com.smartling.android.config'
+
+    smartling { ... }
+
+Library module(s) build.grade:
+
+    apply plugin: 'com.android.library'
+    apply plugin: 'com.smartling.android.library'
+
+App module build.gradle:
+
+    apply plugin: 'com.android.application'
+    apply plugin: 'com.smartling.android.application'
 
 ## Configure the Smartling SDK
 
-We set the SDK to disabled by default and only enable it on the variant
-flavor that we want to enable it for. Note the build variant name is the
-flavor + Debug or Release.
+The SDK mode can be configured by a build variable to enable or disable it for
+a given build run:
 
-```
+```groovy
+ext {
+   SMARTLING_SDK_MODE = "in-app-review"
+}
+
 smartling {
     projectId = "deaf9496f"
-    mode = "disabled"
-    logLevel = "verbose"
-    buildVariants {
-        reviewDebug {
-            mode = "in-app-review"
-        }
-        reviewRelease {
-            mode = "in-app-review"
-        }
-    }
+    mode = SMARTLING_SDK_MODE
 }
 ```
+You can control this the same you update any build property at build time.
 
 ## Running the Demo
 
-You can clone this repository and run the AcmeApp. In Android Studio, set the build variant to
-`reviewDebug` and run the application. The Smartling In-App Review feature will be available.
+You can clone this repository and run the AcmeApp. In Android Studio, set the
+main build file set `SMARTLING_SDK_MODE` to `in-app-review` and run the
+application. The Smartling In-App Review feature will be available.
 
-Change the build variant to `fullDebug` and clean the build. Run the application again, note that
-the conditionals we used still allow the App to compile without the Smartling SDK being linked.
-In this configuration, the Smartling SDK is not present in the built application.
+Change the `SMARTLING_SDK_MODE` to `disabled` and clean the build. Run the
+application again, note that the App to compiles without the Smartling SDK
+being linked. In this configuration, the Smartling SDK is not present in the
+built application.
 
 This can also be confirmed by running a build on the command line.
 
 Assemble the App with SDK enabled:
 
-```
-➜  AcmeApp git:(master) ✗ ./gradlew --info :app:clean :app:assembleReviewDebug |grep Smartling        
-Smartling: building for variant reviewDebug
-Smartling: SDK enabled for variant reviewDebug
-Smartling: Config for reviewDebug: SmartlingConfig{name='reviewDebug', logLevel='verbose', mode='in-app-review', otaServing=null, auth=null}
+```sh
+➜  AcmeApp git:(multimodules) ✗ ./gradlew clean assemble
+
+> Configure project :app
+NO MATCH FOUND
 Smartling: Add process manifest action to review-debug
-Smartling: Config for reviewRelease: SmartlingConfig{name='reviewRelease', logLevel='verbose', mode='in-app-review', otaServing=null, auth=null}
 Smartling: Add process manifest action to review-release
-Smartling: Config for fullDebug: SmartlingConfig{name='fullDebug', logLevel='verbose', mode='disabled', otaServing=null, auth=null}
-Smartling: Config for fullRelease: SmartlingConfig{name='fullRelease', logLevel='verbose', mode='disabled', otaServing=null, auth=null}
-Smartling: Enabled? true
-Smartling: Instrumenting activity classes
+Smartling: Add process manifest action to full-debug
+Smartling: Add process manifest action to full-release
+
+> Configure project :common
+Smartling pre-check mode: in-app-review
+
+> Task :app:preFullDebugBuild
+Smartling: adding deps
+Smartling: adding deps
+
+> Task :app:processFullDebugManifest
+Smartling: Modified manifest at /home/scott/Development/mobile-sdk-examples/android/non-release-builds/AcmeApp/app/build/intermediates/manifests/full/full/debug/AndroidManifest.xml
+
+> Task :app:processReviewDebugManifest
+Smartling: Modified manifest at /home/scott/Development/mobile-sdk-examples/android/non-release-builds/AcmeApp/app/build/intermediates/manifests/full/review/debug/AndroidManifest.xml
+
+> Task :app:processFullReleaseManifest
+Smartling: Modified manifest at /home/scott/Development/mobile-sdk-examples/android/non-release-builds/AcmeApp/app/build/intermediates/manifests/full/full/release/AndroidManifest.xml
+
+> Task :app:processReviewReleaseManifest
+Smartling: Modified manifest at /home/scott/Development/mobile-sdk-examples/android/non-release-builds/AcmeApp/app/build/intermediates/manifests/full/review/release/AndroidManifest.xml
+
+> Task :common:transformClassesWithSmartlingForFullDebug
+Smartling: Applied SDK to com.smartling.demo.common.CommonActivity
+
+> Task :app:transformClassesWithSmartlingForFullDebug
 Smartling: Applied SDK to com.smartling.demo.acmeapp.MainActivity
-:app:transformClassesWithSmartlingForReviewDebug (Thread[Task worker for ':' Thread 6,5,main]) completed. Took 0.337 secs.
+
+> Task :common:transformClassesWithSmartlingForReviewDebug
+Smartling: Applied SDK to com.smartling.demo.common.CommonActivity
+
+> Task :app:transformClassesWithSmartlingForReviewDebug
+Smartling: Applied SDK to com.smartling.demo.acmeapp.MainActivity
+
+> Task :common:transformClassesWithSmartlingForFullRelease
+Smartling: Applied SDK to com.smartling.demo.common.CommonActivity
+
+> Task :app:transformClassesWithSmartlingForFullRelease
+Smartling: Applied SDK to com.smartling.demo.acmeapp.MainActivity
+
+> Task :common:transformClassesWithSmartlingForReviewRelease
+Smartling: Applied SDK to com.smartling.demo.common.CommonActivity
+
+> Task :app:transformClassesWithSmartlingForReviewRelease
+Smartling: Applied SDK to com.smartling.demo.acmeapp.MainActivity
+
+
+BUILD SUCCESSFUL in 17s
+206 actionable tasks: 200 executed, 6 up-to-date
+
 ```
 
 Assemble the App with the SDK disabled:
 
-```
-➜  AcmeApp git:(master) ✗ ./gradlew --info :app:clean :app:assembleFullDebug |grep Smartling
-Smartling: building for variant fullDebug
-Smartling: Enabled? false
-:app:transformClassesWithSmartlingForFullDebug (Thread[Task worker for ':',5,main]) completed. Took 0.016 secs.
-```
+```sh
+➜  AcmeApp git:(multimodules) ✗ ./gradlew clean assemble
 
+> Configure project :app
+NO MATCH FOUND
+
+> Configure project :common
+Smartling pre-check mode: disabled
+
+
+BUILD SUCCESSFUL in 15s
+
+```
