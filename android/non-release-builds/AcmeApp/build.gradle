@@ -2,14 +2,15 @@
 
 buildscript {
     repositories {
+        mavenLocal()
         google()
         jcenter()
         maven { url 'https://raw.githubusercontent.com/Smartling/android-repository/snapshots'}
         maven { url 'https://raw.githubusercontent.com/Smartling/android-repository/releases'}
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
-        classpath 'com.smartling.android:plugin:3.0.0'
+        classpath 'com.android.tools.build:gradle:3.3.2'
+        classpath 'com.smartling.android:plugin:3.1.0-SNAPSHOT'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -25,6 +26,7 @@ ext {
 
 allprojects {
     repositories {
+        mavenLocal()
         google()
         jcenter()
         maven { url 'https://raw.githubusercontent.com/Smartling/android-repository/snapshots'}
@@ -41,8 +43,4 @@ smartling {
     projectId = "deaf9496f"
     mode = SMARTLING_SDK_MODE
     logLevel = "verbose"
-    auth {
-        userIdentifier = "jqyszptjkxekxpzovnqbnxkslfqyyh"
-        userSecret = "n9usf0uj0m3p7t1pjl7vg0qq0hAn%52fu5is445ohfdpu81gdftkts8"
-    }
 }
