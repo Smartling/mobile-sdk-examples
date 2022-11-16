@@ -42,7 +42,7 @@ smartling {
     mode = SMARTLING_SDK_MODE
     logLevel = "verbose"
     auth {
-        userIdentifier = "jqyszptjkxekxpzovnqbnxkslfqyyh"
-        userSecret = "n9usf0uj0m3p7t1pjl7vg0qq0hAn%52fu5is445ohfdpu81gdftkts8"
+        userIdentifier = "your_user_id"
+        userSecret = "your_user_secret"
     }
 }
